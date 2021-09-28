@@ -1,5 +1,5 @@
 import EventPractice from './EventPractice';
-import Sat from './Say';
+import Say from './Say';
 import MyComponents from './MyComponents';
 import './App.css';
 
