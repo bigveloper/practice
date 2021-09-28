@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+import MyComponents from './MyComponents';
 import './App.css';
 
 function App() {
-    return;
+    return <MyComponents />;
 }
 
 export default App;
