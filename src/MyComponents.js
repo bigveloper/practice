@@ -1,9 +1,8 @@
-function MyComponents(props) {
-    const { name, children } = props;
+function MyComponents({ name, children }) {
     return (
         <div>
             <h1>안녕하세요 저는 {name} 입니다.</h1> <br />
-            <h1>드런이 7개면 {children}</h1>
+            <h1>7개의 드런이 모였다. {children}</h1>
         </div>
     );
 }
