@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function EventPractice() {
     const [form, setForm] = useState({
@@ -25,6 +25,10 @@ function EventPractice() {
             onClick('');
         }
     };
+
+    useEffect(() => {
+        console.log(form);
+    }, [form]);
 
     return (
         <div>
