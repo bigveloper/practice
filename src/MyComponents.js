@@ -1,5 +1,5 @@
-function MyComponents() {
-    return <h1>사랑스러운 나의 컴포넌트</h1>;
+function MyComponents(props) {
+    return <h1>안녕하세요 저는 {props.name} 입니다.</h1>;
 }
 
 export default MyComponents;
