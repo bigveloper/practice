@@ -8,8 +8,8 @@ import './App.css';
 function App() {
     return (
         <>
-            {/* <IterationSample /> */}
-            <EventPractice />
+            <IterationSample />
+            {/* <EventPractice /> */}
             {/* <Say /> */}
             {/* <MyComponents /> */}
         </>

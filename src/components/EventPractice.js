@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function EventPractice() {
     // state
@@ -28,7 +28,9 @@ function EventPractice() {
         }
     };
     // watch
-
+    useEffect(() => {
+        console.log(form);
+    }, [form]);
     // view
     return (
         <div>
