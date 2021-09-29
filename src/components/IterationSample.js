@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function IterationSample() {
     // state
@@ -29,17 +29,27 @@ function IterationSample() {
         setNames(nextNames);
     };
 
+    const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            onClick();
+        }
+    };
+
     const namesList = names.map((name) => (
         <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
             {name.text}
         </li>
     ));
+
     // watch
+    useEffect(() => {
+        console.log(namesList);
+    }, [namesList]);
 
     // event
     return (
         <>
-            <input value={inputText} onChange={onChange} />
+            <input value={inputText} onChange={onChange} onKeyPress={onKeyPress} />
             <button onClick={onClick}>확인</button>
             <ul>{namesList}</ul>
         </>
