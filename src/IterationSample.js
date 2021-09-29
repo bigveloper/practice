@@ -14,6 +14,7 @@ function IterationSample() {
     const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
     // event
     const onChange = (e) => setInputText(e.target.value);
+
     const onClick = () => {
         const nextNames = names.concat({
             id: nextId,
@@ -23,6 +24,16 @@ function IterationSample() {
         setNames(nextNames);
         setInputText('');
     };
+
+    const onRemove = (id) => {
+        const nextNames = names.filter((name) => name.id !== id);
+        setNames(nextNames);
+    };
+    const namesList = names.map((name) => (
+        <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+            {name.text}
+        </li>
+    ));
     // watch
     useEffect(() => {
         console.log(names);
@@ -33,7 +44,7 @@ function IterationSample() {
         <>
             <input value={inputText} onChange={onChange} />
             <button onClick={onClick}>ADD</button>
-            <ul>{nameList}</ul>
+            <ul>{namesList}</ul>
         </>
     );
 }
