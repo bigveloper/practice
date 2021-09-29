@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const IterationSample = () => {
     // state
@@ -36,6 +36,11 @@ const IterationSample = () => {
             {name.text}
         </li>
     ));
+
+    // watch
+    useEffect(() => {
+        console.log(namesList);
+    }, [namesList]);
 
     return (
         <>
