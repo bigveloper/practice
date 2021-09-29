@@ -1,11 +1,19 @@
-import IterationSample from './IterationSample';
-import EventPractice from './EventPractice';
-import Say from './Say';
-import MyComponents from './MyComponents';
+import IterationSample from './components/IterationSample';
+import EventPractice from './components/EventPractice';
+import Say from './components/Say';
+import MyComponents from './components/MyComponents';
+
 import './App.css';
 
 function App() {
-    return <IterationSample />;
+    return (
+        <>
+            <IterationSample />
+            {/* <EventPractice /> */}
+            {/* <Say /> */}
+            {/* <MyComponents /> */}
+        </>
+    );
 }
 
 export default App;
