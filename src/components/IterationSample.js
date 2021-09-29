@@ -35,13 +35,13 @@ const IterationSample = () => {
     };
 
     // watch
-
     const namesList = names.map((name) => (
         <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
             {name.text}
         </li>
     ));
     //view
+
     return (
         <>
             <input value={inputText} onChange={onChange} onKeyPress={onKeyPress} />
