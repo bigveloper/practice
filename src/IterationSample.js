@@ -13,11 +13,26 @@ function IterationSample() {
 
     const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
     // event
-
+    const onChange = (e) => setInputText(e.target.value);
+    const onClick = () => {
+        const nextNames = names.concat({
+            id: nextId,
+            text: inputText,
+        });
+        setNextId(nextId + 1);
+        setNames(nextNames);
+        setInputText('');
+    };
     // watch
 
     //view
-    return <ul>{nameList}</ul>;
+    return (
+        <>
+            <input value={inputText} onChange={onChange} />
+            <button onClick={onClick}>ADD</button>
+            <ul>{nameList}</ul>
+        </>
+    );
 }
 
 export default IterationSample;
