@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function IterationSample() {
     // state
@@ -32,11 +32,20 @@ function IterationSample() {
             {name.text}
         </li>
     ));
+    const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            onClick();
+        }
+    };
 
     //watch
+    useEffect(() => {
+        console.log(inputText);
+        console.log(namesList);
+    }, [inputText, namesList]);
     return (
         <>
-            <input value={inputText} onChange={onChange} />
+            <input value={inputText} onChange={onChange} onKeyPress={onKeyPress} />
             <button onClick={onClick}>추가</button>
             <ul>{namesList}</ul>
         </>
