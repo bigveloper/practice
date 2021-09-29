@@ -24,9 +24,17 @@ function IterationSample() {
         setNames(nextName);
         setInputText('');
     };
+    const onRemove = (id) => {
+        const nextName = names.filter((name) => name.id !== id);
+        setNames(nextName);
+    };
     // watch
 
-    const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+    const namesList = names.map((name) => (
+        <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+            {name.text}
+        </li>
+    ));
     //view
     return (
         <>
