@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function IterationSample() {
     // state
@@ -24,6 +24,9 @@ function IterationSample() {
         setInputText('');
     };
     // watch
+    useEffect(() => {
+        console.log(names);
+    }, [names]);
 
     //view
     return (
