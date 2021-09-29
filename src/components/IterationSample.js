@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const IterationSample = () => {
     // state
@@ -23,14 +23,28 @@ const IterationSample = () => {
         setNextId(nextId + 1);
         setInputText('');
     };
+    const onRemove = (id) => {
+        const nextNames = names.filter((name) => name.id !== id);
+        setNames(nextNames);
+    };
+
+    const onKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            onClick();
+        }
+    };
 
     // watch
 
-    const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+    const namesList = names.map((name) => (
+        <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+            {name.text}
+        </li>
+    ));
     //view
     return (
         <>
-            <input value={inputText} onChange={onChange} />
+            <input value={inputText} onChange={onChange} onKeyPress={onKeyPress} />
             <button onClick={onClick}>확인</button>
             <ul>{namesList}</ul>
         </>
