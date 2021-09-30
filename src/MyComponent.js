@@ -1,8 +1,8 @@
-function MyComponent(props) {
+function MyComponent({ name, children }) {
     return (
         <div>
-            내 이름은 {props.name} <br />
-            children 값은 {props.children}
+            내 이름은 {name} <br />
+            children 값은 {children}
         </div>
     );
 }
