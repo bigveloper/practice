@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function EventPractice() {
     // state
@@ -14,6 +14,11 @@ function EventPractice() {
         setUsername('');
         setMessage('');
     };
+
+    useEffect(() => {
+        console.log(username);
+        console.log(message);
+    }, [username, message]);
     return (
         <div>
             <h1>이벤트를 연습해보자~!</h1>
