@@ -1,3 +1,4 @@
+import EventPractice from './EventPractice';
 import MyComponent from './MyComponent';
 import Say from './Say';
 import './App.css';
@@ -5,7 +6,8 @@ import './App.css';
 function App() {
     return (
         <div>
-            <Say />
+            <EventPractice />
+            {/* <Say /> */}
         </div>
         // <MyComponent name="React" favoriteNumber={0}>
         //     React
