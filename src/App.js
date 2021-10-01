@@ -6,7 +6,8 @@ import './App.css';
 function App() {
     const [visible, setVisible] = useState(false);
     return (
-        <Counter />
+        // <Counter />
+        <Info />
         // <div>
         //     <button
         //         onClick={() => {
