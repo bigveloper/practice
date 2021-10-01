@@ -5,6 +5,15 @@ import About from './About';
 function App() {
     return (
         <div>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/about">Intorduce</Link>
+                </li>
+            </ul>
+            <hr />
             <Route path="/" component={Home} exact={true} />
             <Route path="/about" component={About} />
         </div>
