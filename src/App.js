@@ -4,6 +4,7 @@ import About from './About';
 import Profile from './Profile';
 import Profiles from './Profiles';
 import HistorySample from './HistorySample';
+import WithRouterSample from './WithRouterSample';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
             {/* <Route path="/profile/:username" component={Profile} /> */}
             <Route path="/profiles" component={Profiles} />
             <Route path="/historysample" component={HistorySample} />
+            <WithRouterSample />
         </div>
     );
 }
