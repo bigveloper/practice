@@ -1,23 +1,13 @@
-import { useState } from 'react';
-import Counter from './Counter';
-import Info from './Info';
-import './App.css';
+import { Route, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
 
 function App() {
-    const [visible, setVisible] = useState(false);
     return (
-        // <Counter />
-        <Info />
-        // <div>
-        //     <button
-        //         onClick={() => {
-        //             setVisible(!visible);
-        //         }}>
-        //         {visible ? '숨기기' : '보이기'}
-        //     </button>
-        //     <hr />
-        //     {visible && <Info />}
-        // </div>
+        <div>
+            <Route path="/" component={Home} exact={true} />
+            <Route path="/about" component={About} />
+        </div>
     );
 }
 
