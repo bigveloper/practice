@@ -1,8 +1,9 @@
 import Counter from './Couter';
+import Info from './Info';
 import './App.css';
 
 function App() {
-    return <Counter />;
+    return <Info />;
 }
 
 export default App;
