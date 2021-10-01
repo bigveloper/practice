@@ -1,4 +1,5 @@
 import EventPractice from './EventPractice';
+import IterationSample from './IterationSample';
 import MyComponent from './MyComponent';
 import Say from './Say';
 import './App.css';
@@ -6,7 +7,8 @@ import './App.css';
 function App() {
     return (
         <div>
-            <EventPractice />
+            <IterationSample />
+            {/* <EventPractice /> */}
             {/* <Say /> */}
         </div>
         // <MyComponent name="React" favoriteNumber={0}>
