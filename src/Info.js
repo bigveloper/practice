@@ -10,9 +10,13 @@ function Info() {
     const onChangeNikName = (e) => setNikname(e.target.value);
 
     useEffect(() => {
+        console.log('effect');
         console.log(name);
-        console.log(nikname);
-    }, [name, nikname]);
+        return () => {
+            console.log('clean up');
+            console.log(name);
+        };
+    }, [name]);
 
     return (
         <div>
