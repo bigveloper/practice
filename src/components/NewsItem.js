@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const NewsItemBlock = styled.div`
     display: flex;
+
     .thumbnail {
         margin-right: 1rem;
         img {
@@ -15,7 +16,7 @@ const NewsItemBlock = styled.div`
         h2 {
             margin: 0;
             a {
-                dolor: black;
+                color: black;
             }
         }
         p {
@@ -37,7 +38,7 @@ const NewsItem = ({ article }) => {
             {urlToImage && (
                 <div className="thumbnail">
                     <a href={url} target="_blank" rel="noopener noreferrer">
-                        {title}
+                        <img src={urlToImage} alt="thumbnail" />
                     </a>
                 </div>
             )}
