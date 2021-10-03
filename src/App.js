@@ -1,12 +1,9 @@
 import './App.css';
 import MyComponent from './MyComponent';
+import Say from './Say';
 
 function App() {
-    return (
-        <MyComponent name="React" favoriteNumber={0}>
-            리액트
-        </MyComponent>
-    );
+    return <Say />;
 }
 
 export default App;
